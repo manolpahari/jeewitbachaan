@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  margin: 0;
+  font-family:'Poppins', sans-serif, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+h1 {
+  font-family: 'Poppins-SemiBold', sans-serif;
+  font-size: 2.8rem;
+}
+
+h2 {
+  font-family: 'Poppins-SemiBold', sans-serif;
+  font-size: 2.5rem;
+  line-height: 4rem;
+}
+
+.container {
+  padding: 1% 0 2% 10%;
+  position: relative;
+  min-height: 100%;
+  margin: 0;
+  min-width: 89%;
+}
+
+/* Navigation section */
+.nav-menu {
+  font-family: 'poppins-SemiBold', sans-serif;
+  font-size: 1rem;
+  padding: 0 10%;
+}
+
+
+.nav-menu li {
+  text-transform: uppercase;
+  color: #0081FF;
+}
+
+.contact li::after {
+  content: " |";  /* this is your text. You can also use UTF-8 character codes as I do here */
+  margin-left: .7rem;
+}
+
+
+/* Banner */
+
+.banner-bg {
+  display: block;
+  background: #0081FF;
+  width: 100%;
+  height: auto;
+}
+
+.banner-bg iframe {
+  width: 50em;
+  height:608px;
+}
+
+.banner-content-right {
+  padding: 15px 0 0 10px;
+  float: right;
+}
+
+
+.banner-content-left {
+  color:#fff;
+  padding: 10%;
+}
+
+.banner-content-left .title{
+  font-family: 'Poppins-Regular', sans-serif;
+  font-size: 18px;
+}
+
+/* Banner Tab section */
+
+.tab-wrapper {
+  width: 100%;
+  position: absolute;
+}
+
+.tab-wrapper ul {
+  display: flex;
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.tab-wrapper ul li{
+  padding: 50px;
+}
+
+.tab-wrapper ul li.watch {
+  background: #0F55D6;
+  width:33.35%;
+  height: 174px;
+}
+
+.tab-wrapper ul li.listen {
+  background: #0D61E2;
+  width:33.35%;
+  height: 174px;
+}
+
+.tab-wrapper ul li.read{
+  background: #086BEA;
+  width:33.35%;
+  height: 174px;
+}
+
+.tab-wrapper ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Poppins-Medium', sans-serif;
+  font-size: 1.5rem;
+  color:#fff;
+}
+
+.tab-wrapper ul li:hover {
+  background:#14BEFF;
+  cursor: pointer;
+}
+
+
+.tab-wrapper ul li a img {
+  width: 76px;
+  height: 76px;
+  margin-right: 1.5rem;
+}
+
+/* Dashboard section */
+
+#breadcrumb {
+  font-family: 'Poppins-Regular', sans-serif;
+  font-size: 18px;
+  color: #000;
+  text-decoration: none;
+}
+
+
+#breadcrumb::before{
+  font-weight: 900;
+  content: "< ";
+  font-size: 1.2rem;
+}
+
+.featured-videos-wrapper {
+  background: #F7FBFF;
+  position: relative;
+  top: 200px;
+}
+ 
+.featured-header {
+  color: #0081FF;
+  margin-top:1em;
+}
+
+hr {
+ border: 3px solid #0081FF;
+ margin: 1px 0 0 0;
+ width: 80px;
+}
+
+.video-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.video-box iframe {
+  padding: 30px 0 0 0;
+  margin-right: 30px;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  text-align: center;
+}
+
+.filter-buttons li {
+  background: #fff;
+  border-radius: 10px;
+  width: 156px;
+  height: 53px; 
+  margin: 12px 5px 5px 0;
+  padding:14px;
+}
+
+.filter-buttons li:hover { 
+background: #0081FF;
+cursor: pointer;
+}
+
+.filter-buttons li a {
+  color: #B2B2B2;
+  text-decoration: none;
+}
+
+.filter-buttons li a:hover { 
+  color: #fff;
+}
+
+/* Footer Section */
+
+.footer {
+  position:relative;
+  bottom:-200px;
+  width:100%;
+  height:100px;
+  background-color:#0081FF;
+  color: white;
+  text-align: center;
+}
+
+.footer p{ 
+  padding: 40px;
+}
