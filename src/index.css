@@ -12,6 +12,7 @@ body {
   font-family:'Poppins', sans-serif, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+  background-color: #F7FBFF;
 }
 
 h1 {
@@ -224,5 +225,6 @@ cursor: pointer;
 }
 
 .footer p{ 
-  padding: 40px;
+  line-height: 100px;
+  margin-bottom: 0;
 }
