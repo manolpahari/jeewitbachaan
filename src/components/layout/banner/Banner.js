@@ -9,7 +9,7 @@ const Banner = ({ onRouteChange }) => {
     <div>
         <div className="banner-bg">
             <div className="banner-content-right -auto">
-                <iframe src="https://www.youtube.com/embed/0tyRis6Md6A" frameBorder="0" 
+                <iframe src="https://www.youtube.com/embed/0tyRis6Md6A" frameBorder="0" title="Revelation"
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
                   allowFullScreen>
                 </iframe>
