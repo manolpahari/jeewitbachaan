@@ -4,7 +4,7 @@ import Headphone from './headphone.png';
 import Play from './play-button.png';
 
 
-const Banner = () => {
+const Banner = ({ onRouteChange }) => {
   return (
     <div>
         <div className="banner-bg">
@@ -25,9 +25,12 @@ const Banner = () => {
         <div className="banner-tab">
           <div className="tab-wrapper">
             <ul>
-              <li className="watch"><a href="/watch"><img className="change-my-color" src={Play} alt=""/>Watch</a></li>
-              <li className="listen"><a href="listen"><img src={Headphone} alt=""/>Listen</a></li>
-              <li className="read"><a href="read"><img src={Book} alt=""/>Read</a></li>
+              <li className="watch" 
+              onClick={() => onRouteChange('watch')}>
+              <img className="change-my-color" src={Play} alt=""/>Watch
+              </li>
+              <li className="listen" onClick={() => onRouteChange('listen')}><img src={Headphone} alt=""/>Listen</li>
+              <li className="read" onClick={() => onRouteChange('read')}><img src={Book} alt=""/>Read</li>
             </ul>
           </div>
         </div>

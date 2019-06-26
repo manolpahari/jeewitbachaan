@@ -1,11 +1,16 @@
 import React from 'react';
+import Video from '../video/video';
 
-const FeaturedVideos = () => {
+const FeaturedVideos = ({ videosData }) => {
+  const videosArray = videosData.map( video => {
+    return <Video key={video.etag} video={video} />;
+  })
   return (
-      <div className="featured-videos-wrapper">
+      <div style={{background:'#F7FBFF', position:'relative', top:'200px'}}>
         <div className="container">
-            <a href="/home" id="breadcrumb">Back to Homepage</a>
-            <h1 className="featured-header">Featured Videos</h1>
+            <span style={{fontWeight:'900', fontSize:'1.2rem'}}>&larr;</span> 
+            <span className="pointer ml1">Back to Homepage</span>
+            <h1 style={{marginTop:'1em', color:'#0081FF'}}>Featured Videos</h1>
             <hr/>
             <div className="filter-options">
               <ul className="filter-buttons">
@@ -24,67 +29,8 @@ const FeaturedVideos = () => {
                 <li><a href="/">Special Projects</a></li>
               </ul>
             </div>
-            <div className="video-box">
-              <iframe width="450" height="280" src="https://www.youtube.com/embed/3C82IynR-S4" 
-              frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen>
-              </iframe>
-             
-              <iframe width="450" height="280" src="https://www.youtube.com/embed/e52xWVYukMA" 
-              frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen>
-              </iframe>
-             
-              <iframe width="450" height="280" src="https://www.youtube.com/embed/YIstr0JooCk" 
-              frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen>
-              </iframe>
-
-              <iframe width="450" height="280" src="https://www.youtube.com/embed/3C82IynR-S4" 
-              frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen>
-              </iframe>
-             
-              <iframe width="450" height="280" src="https://www.youtube.com/embed/e52xWVYukMA" 
-              frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen>
-              </iframe>
-             
-              <iframe width="450" height="280" src="https://www.youtube.com/embed/YIstr0JooCk" 
-              frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen>
-              </iframe>
-
-              <iframe width="450" height="280" src="https://www.youtube.com/embed/3C82IynR-S4" 
-              frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen>
-              </iframe>
-             
-              <iframe width="450" height="280" src="https://www.youtube.com/embed/e52xWVYukMA" 
-              frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen>
-              </iframe>
-             
-              <iframe width="450" height="280" src="https://www.youtube.com/embed/YIstr0JooCk" 
-              frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen>
-              </iframe>
-
-              <iframe width="450" height="280" src="https://www.youtube.com/embed/3C82IynR-S4" 
-              frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen>
-              </iframe>
-             
-              <iframe width="450" height="280" src="https://www.youtube.com/embed/e52xWVYukMA" 
-              frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen>
-              </iframe>
-             
-              <iframe width="450" height="280" src="https://www.youtube.com/embed/YIstr0JooCk" 
-              frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-              allowFullScreen>
-              </iframe>
-
+            <div>
+             {videosArray}
             </div>
         </div>
     </div>

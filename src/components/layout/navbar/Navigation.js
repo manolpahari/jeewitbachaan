@@ -3,16 +3,17 @@ import logo from './JB-logo-large.png';
 import {Nav, Navbar} from 'react-bootstrap';
 
 
-const Navigation = () => {
+const Navigation = ({ onRouteChange }) => {
   return (
     <div>
       <Navbar bg="white" expand="lg" fixed="top" className="nav-menu">
-        <Navbar.Brand href="#home">
+        <Navbar.Brand>
           <img
           src={logo}
           width="200"
           height="70"
-          className="d-inline-block align-top"
+          className="d-inline-block align-top pointer"
+          onClick={ ()=>onRouteChange('home') }
           alt="React Bootstrap logo"
         />
         </Navbar.Brand>
