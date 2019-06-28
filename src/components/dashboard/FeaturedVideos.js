@@ -34,7 +34,7 @@ class FeaturedVideos extends React.Component {
                   <li><a href="/">Special Projects</a></li>
                 </ul>
               </div> */}
-              <div>
+              <div className="video-wrapper">
                {videoPlaylistArray}
               </div>
           </div>

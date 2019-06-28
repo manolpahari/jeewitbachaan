@@ -7,9 +7,9 @@ const video = ({ videoList, toggleModal, showVideo }) => {
 
          const imageSrc = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
          return (
-                 <div className="ma2 dib grow shadow-5 pointer" onClick={() => showVideo(videoId)}>
+                 <div className="video-card dib grow shadow-5 pointer" onClick={() => showVideo(videoId)}>
                      <article 
-                     className="br2 ba dark-gray b--black-10 w-100 w-50-m w-25-l center"
+                     className="dark-gray b--black-10 center"
                      onClick={() => toggleModal('video')}
                      >
                          <img width={width} height={height} src={imageSrc} alt="imageName" />

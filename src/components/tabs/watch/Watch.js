@@ -59,7 +59,7 @@ class Watch extends React.Component {
                   <li>Special Projects</li>
                 </ul>
               </div>
-              <div>
+              <div className="video-wrapper">
                 {/* Display an array of video cards */}
                  {videoList}
               </div>
