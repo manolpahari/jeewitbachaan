@@ -3,7 +3,7 @@ import logo from './JB-logo-large.png';
 import {Nav, Navbar} from 'react-bootstrap';
 
 
-const Navigation = ({ onRouteChange }) => {
+const Navigation = ({ onRouteChange, toggleModal }) => {
   return (
     <div>
       <Navbar bg="white" expand="lg" fixed="top" className="nav-menu">
@@ -20,8 +20,8 @@ const Navigation = ({ onRouteChange }) => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
-            <Nav.Link href="#contact" className="contact"><li>CONTACT US</li></Nav.Link>
-            <Nav.Link href="#search" className="search"><li>SEARCH</li></Nav.Link>
+            <Nav.Link  className="contact"><li onClick={() => toggleModal('contact')}>CONTACT US</li></Nav.Link>
+            <Nav.Link  className="search"><li onClick={toggleModal}>SEARCH</li></Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
