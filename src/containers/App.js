@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
+import playIcon from '../../src/playIcon.png';
 import Navbar from '../components/layout/navbar/Navigation';
 import Banner from '../components/layout/banner/Banner';
 import FeaturedVideo from '../components/dashboard/FeaturedVideos';
 import Footer from '../components/layout/footer/Footer';
-import Watch from '../components/tabs/watch/Watch';
-import Listen from '../components/tabs/listen/Listen';
-import Read from '../components/tabs/read/Read';
+import Watch from '../components/pages/watch/Watch';
+import Listen from '../components/pages/listen/Listen';
+import Read from '../components/pages/read/Read';
 import Modal from '../components/modal/modal';
 import Popup from '../components/modal/popup';
 import PopupVideo from '../components/modal/popupvideo';
@@ -36,7 +37,6 @@ class App extends Component {
   componentDidMount () {
     // fetching latest videos from youtube api.
     const fullVideosUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${this.state.apiRequestParameter.channelId}&maxResults=${this.state.apiRequestParameter.maxResults}&order=${this.state.apiRequestParameter.order}&type=${this.state.apiRequestParameter.type}&key=${this.state.apiRequestParameter.apiKey}`;   
-    console.log(fullVideosUrl);
     fetch(fullVideosUrl)
     .then(resp => resp.json())
     .then(data => this.setState({ playlistData: data.items }))
@@ -74,6 +74,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(playIcon);
     const { route, playlistData, isModalOpen, apiRequestParameter, modalTriggerKey } = this.state;
     return (
       <div className="App">
@@ -100,11 +101,17 @@ class App extends Component {
             <FeaturedVideo playlistData={playlistData} 
               apiRequestParameter={apiRequestParameter} 
               showVideo={this.showVideo} 
-              toggleModal={this.toggleModal}/>  
+              toggleModal={this.toggleModal}
+              playIcon={playIcon}/>  
           </div> :
         route === 'watch' ?
           <div>
-            <Watch onRouteChange={this.onRouteChange} toggleModal={this.toggleModal} isModalOpen={isModalOpen} showVideo={this.showVideo}/>
+            <Watch onRouteChange={this.onRouteChange} 
+            toggleModal={this.toggleModal} 
+            isModalOpen={isModalOpen} 
+            showVideo={this.showVideo}
+            playIcon={playIcon}
+            />
           </div> :
           route === 'listen' ?
           <div>

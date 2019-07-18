@@ -1,6 +1,6 @@
 import React from 'react';
 
-const watchVideo = ({ videoLists, toggleModal, isModalOpen, showVideo }) => {
+const watchVideo = ({ videoLists, toggleModal, isModalOpen, showVideo, playIcon }) => {
     const imageSrc = `https://img.youtube.com/vi/${videoLists.videoId}/mqdefault.jpg`;
     const videoId = videoLists.videoId
     return (
@@ -10,6 +10,10 @@ const watchVideo = ({ videoLists, toggleModal, isModalOpen, showVideo }) => {
                 onClick={() => toggleModal('video')}
                 >
                     <img width="320" height="180" src={imageSrc} alt="imageName" />
+                    <img src={playIcon} width="68" height="48" 
+                              className="play-icon" 
+                              alt="play-icon"
+                              style={{position:'absolute', top:'30%', left:'35%'}}/>
                     <div className="pa2 ph3-ns pb3-ns">
                         <div className="dt mt1">
                             <p className="dtc f6 fw6 lh-copy measure-narrow mt2 mid-gray hover-blue">

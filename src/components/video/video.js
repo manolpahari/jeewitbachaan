@@ -1,6 +1,6 @@
 import React from 'react'
 
-const video = ({ videoList, toggleModal, showVideo }) => {
+const video = ({ videoList, toggleModal, showVideo, playIcon }) => {
          const videoId = videoList.id.videoId;
          const width = videoList.snippet.thumbnails.medium.width;
          const height = videoList.snippet.thumbnails.medium.height;
@@ -13,6 +13,10 @@ const video = ({ videoList, toggleModal, showVideo }) => {
                      onClick={() => toggleModal('video')}
                      >
                          <img width={width} height={height} src={imageSrc} alt="imageName" />
+                         <img src={playIcon} width="68" height="48" 
+                              className="play-icon pointer grow" 
+                              alt="play-icon"
+                              style={{position:'absolute', top:'30%', left:'35%'}}/>
                          <div className="pa2 ph3-ns pb3-ns">
                              <div className="dt mt1">
                                  <p className="dtc f6 fw6 lh-copy measure-narrow mt2 mid-gray hover-blue">

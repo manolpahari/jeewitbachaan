@@ -4,10 +4,15 @@ import Video from '../video/video';
 class FeaturedVideos extends React.Component {
   
   render() {
-    const { playlistData, showVideo, toggleModal } = this.props;
+    const { playlistData, showVideo, toggleModal, playIcon } = this.props;
     console.log(playlistData)
     const videoPlaylistArray = playlistData.map( playlist => {
-      return <Video key={playlist.id.videoId} videoList={playlist} showVideo={showVideo} toggleModal={toggleModal}/>
+      return <Video key={playlist.id.videoId} 
+              videoList={playlist} 
+              showVideo={showVideo} 
+              toggleModal={toggleModal}
+              playIcon={playIcon}
+              />
     })
     
     return (
