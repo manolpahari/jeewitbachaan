@@ -5,7 +5,6 @@ class FeaturedVideos extends React.Component {
   
   render() {
     const { playlistData, showVideo, toggleModal, playIcon } = this.props;
-    console.log(playlistData)
     const videoPlaylistArray = playlistData.map( playlist => {
       return <Video key={playlist.id.videoId} 
               videoList={playlist} 

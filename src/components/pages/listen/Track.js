@@ -1,30 +1,96 @@
 import React from 'react';
 import { FaRegPlayCircle, FaRegPauseCircle, FaPlay, FaPause } from "react-icons/fa";
 
+let song = new Audio('https://jeewitbachan-assets.s3.ap-south-1.amazonaws.com/audiobooks/col/col_1.mp3'
+);
 
 class Track extends React.Component {
     constructor() {
         super();
-        this.state={
+        this.state= {
             nowPlaying: '',
-            isPlaying: false
+            isPlaying: false,
+            isPaused: true,
         }
     }
+
+    componentDidUpdate() {
+        song.addEventListener('timeupdate', () => {
+        let fillBar = document.getElementById("fill");
+        let position = song.currentTime/ song.duration;
+        fillBar.style.width = position * 100 + '%';
+        });
+      };
+
 //toggle isPlayng state to display play/pause button
-    toggleIsPlaying(id) {
-        this.setState( prevState => ({
-            nowPlaying: id,
-            isPlaying: !prevState.isPlaying
-        }))
-        console.log('nowPlaying id', this.state.nowPlaying);
-        console.log('isPlaying', this.state.isPlaying)
+    toggleIsPlaying = (id) => {
+
+        if(id === this.state.nowPlaying){
+            this.setState((prevState) => {
+                return {
+                isPlaying: !prevState.isPlaying,
+                isPaused: !prevState.isPaused,
+                }
+            })
+        }else {
+            this.setState(() => {
+                return {
+                    nowPlaying: id,
+                    isPlaying: true,
+                    isPaused: false,
+                }
+               
+            })
+        }
+
     }
 
     render() {
-        const { playOrPause, albums, timeupdate } = this.props;
-        const { nowPlaying, isPlaying } = this.state;
+        const { albums } = this.props;
+        const { nowPlaying, isPlaying, isPaused } = this.state;
         const tracksList = albums.map(tracks => {return tracks});
 
+        //Function to play or pause the audio Book 1
+        const playOrPause = (src) => {
+            let newSong = new Audio(src);
+            if(song.src === newSong.src) { 
+                 if(song.paused) { 
+                     song.play();
+                    
+                 }else{
+                     song.pause();
+                 }
+            }else {  
+                song.pause();
+                song = newSong;
+                song.play();
+            }
+        }
+
+        //map tracksList to get the indidual track 
+        
+        const tracklists = tracksList.map( track => {
+            return <div key={track.id} className="track">
+                        <span className="play-pause pointer dim"
+                        onClick={() => {playOrPause(track.url); this.toggleIsPlaying(track.id); }}
+                        >
+                            {
+                                !isPlaying && nowPlaying === isPlaying && isPaused ?   
+                                   <FaPause color="#0E55D6" size="1.5em"/> : 
+                                isPlaying && nowPlaying === track.id && !isPaused? 
+                                   <FaPause color="#0E55D6" size="1.5em"/> : 
+                                !isPlaying && nowPlaying === track.id && !isPaused ? 
+                                   <FaPause color="#0E55D6" size="1.5em"/> : <FaPlay color="#0E55D6" size="1.5em"/>
+                            }
+                     
+                        </span>
+                        <span className="audio-title">{track.title}</span>
+                        <span className="audio-length">{track.length}</span>
+                       
+                    </div>  
+        })
+                            
+        
         return (  
             <div className='audio-list-container'>
                   <div className="player-wrapper">
@@ -34,9 +100,13 @@ class Track extends React.Component {
                           <div id="audioTitle" className="audio-title">{tracksList[0].title}
                           </div>
                           <div className="slider-wrapper">
-                              <input id="audioSlider" type="range" min="0" max="10" step="1" onChange={timeupdate}/>
+                              {/* <input id="audioSlider" type="range" min="0" max="10" step=""/> */}
+                              <div className="seek-bar">
+                                <div id="fill"></div>
+                                <div id="handle"></div>
+                              </div>
                           </div>
-                          <div className="controllers">
+                          <div className="controllers flex justify-center">
                               <span 
                               className="pointer"
                               onClick={() => {playOrPause(tracksList[0].url); this.toggleIsPlaying(tracksList[0].id); }}
@@ -50,23 +120,7 @@ class Track extends React.Component {
                           </div>
                       </div>
                       <div className="playlist">
-                          {
-                             //map tracksList to get the indidual track 
-                            tracksList.map( track => {
-                                return <div key={track.id} className="track">
-                                            <span className="play-pause pointer dim"
-                                            onClick={() => {playOrPause(track.url); this.toggleIsPlaying(track.id); }}
-                                            >
-                                                {
-                                                    isPlaying && nowPlaying === track.id ? <FaPause color="#0E55D6" size="1.5em"/> : 
-                                                    <FaPlay color="#0E55D6" size="1.5em"/>
-                                                }
-                                            </span>
-                                            <span className="audio-title">{track.title}</span>
-                                            <span className="audio-length">{track.length}</span>
-                                        </div>  
-                            })
-                          }
+                          {tracklists}
                      </div>
                  </div>
             </div>

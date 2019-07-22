@@ -428,3 +428,29 @@ i {
       padding: 40px 20px 20px;
   }
 }
+
+/* added by manol for audio seek bar */
+.seek-bar {
+  width: 250px;
+  height: 8px;
+  background: white;
+  display: flex;
+  border-radius: 50px;
+  margin: 25px 25px;
+  cursor: pointer;
+}
+
+#fill {
+  height: 8px;
+  background: #0D61E2;
+  border-radius: 20px;
+}
+
+#handle {
+  width: 8px;
+  height: 8px;
+  background: #f43b7e;
+  border-radius: 50%;
+  margin-left: -5px;
+  transform: scale(2);
+}

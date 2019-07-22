@@ -7,12 +7,12 @@ const video = ({ videoList, toggleModal, showVideo, playIcon }) => {
 
          const imageSrc = `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
          return (
-                 <div className="video-card dib grow shadow-5 pointer" onClick={() => showVideo(videoId)}>
+                 <div className="video-card dib grow shadow-5 pointer br2" onClick={() => showVideo(videoId)}>
                      <article 
                      className="dark-gray b--black-10 center"
                      onClick={() => toggleModal('video')}
                      >
-                         <img width={width} height={height} src={imageSrc} alt="imageName" />
+                         <img className="br2" width={width} height={height} src={imageSrc} alt="imageName" />
                          <img src={playIcon} width="68" height="48" 
                               className="play-icon pointer grow" 
                               alt="play-icon"

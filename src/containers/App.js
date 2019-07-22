@@ -35,12 +35,12 @@ class App extends Component {
 
  
   componentDidMount () {
-    // fetching latest videos from youtube api.
-    const fullVideosUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${this.state.apiRequestParameter.channelId}&maxResults=${this.state.apiRequestParameter.maxResults}&order=${this.state.apiRequestParameter.order}&type=${this.state.apiRequestParameter.type}&key=${this.state.apiRequestParameter.apiKey}`;   
-    fetch(fullVideosUrl)
-    .then(resp => resp.json())
-    .then(data => this.setState({ playlistData: data.items }))
-    .catch(err => console.log(err))
+      // fetching latest videos from youtube api.
+      const fullVideosUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${this.state.apiRequestParameter.channelId}&maxResults=${this.state.apiRequestParameter.maxResults}&order=${this.state.apiRequestParameter.order}&type=${this.state.apiRequestParameter.type}&key=${this.state.apiRequestParameter.apiKey}`;   
+      fetch(fullVideosUrl)
+      .then(resp => resp.json())
+      .then(data => this.setState({ playlistData: data.items }))
+      .catch(err => console.log(err))
   }
 
   showVideo = (videoData) => {
@@ -74,7 +74,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(playIcon);
     const { route, playlistData, isModalOpen, apiRequestParameter, modalTriggerKey } = this.state;
     return (
       <div className="App">
