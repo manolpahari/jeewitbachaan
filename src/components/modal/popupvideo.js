@@ -2,7 +2,6 @@ import React from 'react';
 import './modal.css';
 
 const popupVideo = ({ toggleModal, modalTriggerKey, videoData }) => {
-    console.log(videoData);
     const src = `https://www.youtube.com/embed/${videoData}`;
 
     return (

@@ -1,12 +1,12 @@
-export const VideosList = [
+export const VIDEO_DATA = [
 	{
 		id:  1,
 		videoId:  'PoBbZ5X9_ME',
 		title:  'Choose to obey. ( आज्ञापालन गर्न राेज्नुहाेस् । )',
         Speaker:  'S.B. Thing',
 		category:  [
-			'S.B Thing',
-			'',
+			'S.B. Thing',
+			'All',
 			''
 		]
   },{
@@ -18,7 +18,7 @@ export const VideosList = [
 		category:  [
 
 			'S.B. Thing',
-			'',
+			'All',
 			''
          ]
     },{
@@ -29,8 +29,8 @@ export const VideosList = [
         Speaker:  'S.B. Thing',
 		category:  [
 
-			'',
-			'',
+			'Revial Series',
+			'All',
 			''
             ]
     },{
@@ -43,7 +43,7 @@ export const VideosList = [
 		category:  [
 
 			'Health',
-			'',
+			'All',
 			''
              ]
     },{
@@ -56,7 +56,7 @@ export const VideosList = [
 		category:  [
 
 			'Health',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -68,7 +68,7 @@ export const VideosList = [
 		category:  [
 
 			'Health',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -80,7 +80,7 @@ export const VideosList = [
 		category:  [
 
 			'Bible Studies',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -92,7 +92,7 @@ export const VideosList = [
 		category:  [
 
 			'Bible Studies',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -104,7 +104,7 @@ export const VideosList = [
 		category:  [
 
 			'Bible Studies',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -116,7 +116,7 @@ export const VideosList = [
 		category:  [
 
 			'7th Day Sabbath Series',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -128,7 +128,7 @@ export const VideosList = [
 		category:  [
 
 			'7th Day Sabbath Series',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -140,7 +140,7 @@ export const VideosList = [
 		category:  [
 
 			'7th Day Sabbath Series',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -152,7 +152,7 @@ export const VideosList = [
 		category:  [
 
 			'7th Day Sabbath Series',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -164,7 +164,7 @@ export const VideosList = [
 		category:  [
 
 			'7th Day Sabbath Series',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -176,7 +176,7 @@ export const VideosList = [
 		category:  [
 
 			'7th Day Sabbath Series',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -188,7 +188,7 @@ export const VideosList = [
 		category:  [
 
 			'Joseph Magar',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -200,7 +200,7 @@ export const VideosList = [
 		category:  [
 
 			'Joseph Magar',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -212,7 +212,7 @@ export const VideosList = [
 		category:  [
 
 			'Joseph Magar',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -224,7 +224,7 @@ export const VideosList = [
 		category:  [
 
 			'Joseph Magar',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -236,7 +236,7 @@ export const VideosList = [
 		category:  [
 
 			'Joseph Magar',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -248,7 +248,7 @@ export const VideosList = [
 		category:  [
 
 			'Joseph Magar',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -260,7 +260,7 @@ export const VideosList = [
 		category:  [
 
 			'Joseph Magar',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -272,7 +272,7 @@ export const VideosList = [
 		category:  [
 
 			'Joseph Magar',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -284,7 +284,7 @@ export const VideosList = [
 		category:  [
 
 			'Joseph Magar',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -296,7 +296,7 @@ export const VideosList = [
 		category:  [
 
 			'Joseph Magar',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -308,7 +308,7 @@ export const VideosList = [
 		category:  [
 
 			'Joseph Magar',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -320,7 +320,7 @@ export const VideosList = [
 		category:  [
 
 			'',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -332,7 +332,7 @@ export const VideosList = [
 		category:  [
 
 			'Bible Documentaries',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -344,7 +344,7 @@ export const VideosList = [
 		category:  [
 
 			'Bible Documentaries',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -356,7 +356,7 @@ export const VideosList = [
 		category:  [
 
 			'Bible Documentaries',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -368,7 +368,7 @@ export const VideosList = [
 		category:  [
 
 			'Bible Documentaries',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -380,7 +380,7 @@ export const VideosList = [
 		category:  [
 
 			'Bible Documentaries',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -392,7 +392,7 @@ export const VideosList = [
 		category:  [
 
 			'Bible Documentaries',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -404,7 +404,7 @@ export const VideosList = [
 		category:  [
 
 			'Bible Documentaries',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -416,7 +416,7 @@ export const VideosList = [
 		category:  [
 
 			'Bible Documentaries',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -428,7 +428,7 @@ export const VideosList = [
 		category:  [
 
 			'Bible Documentaries',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -440,7 +440,7 @@ export const VideosList = [
 		category:  [
 
 			'Bible Documentaries',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -452,7 +452,7 @@ export const VideosList = [
 		category:  [
 
 			'',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -464,7 +464,7 @@ export const VideosList = [
 		category:  [
 
 			'',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -476,7 +476,7 @@ export const VideosList = [
 		category:  [
 
 			'S.B. Thing',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -488,7 +488,7 @@ export const VideosList = [
 		category:  [
 
 			'S.B. Thing',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -500,7 +500,7 @@ export const VideosList = [
 		category:  [
 
 			'S.B. Thing',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -512,7 +512,7 @@ export const VideosList = [
 		category:  [
 
 			'S.B. Thing',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -524,7 +524,7 @@ export const VideosList = [
 		category:  [
 
 			'S.B. Thing',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -536,7 +536,7 @@ export const VideosList = [
 		category:  [
 
 			'S.B. Thing',
-			'',
+			'All',
 			''
 		     ]
     },{
@@ -548,7 +548,7 @@ export const VideosList = [
 		category:  [
 
 			'S.B. Thing',
-			'',
+			'All',
 			''
 		     ]
 	    },{
@@ -560,7 +560,7 @@ export const VideosList = [
 		category:  [
 
 			'S.B. Thing',
-			'',
+			'All',
 			''
 		     ]
 	    },{
@@ -572,7 +572,7 @@ export const VideosList = [
 		category:  [
 
 			'S.B. Thing',
-			'',
+			'All',
 			''
 		     ]
 	    },{
@@ -582,9 +582,8 @@ export const VideosList = [
 		title:  'Cosmic Conflict (ब्रहमाण्डीय द्वन्द्व)',
         Speaker:  'S.B. Thing',
 		category:  [
-
 			'S.B. Thing',
-			'',
+			'All',
 			''
 		     ]
 	    }

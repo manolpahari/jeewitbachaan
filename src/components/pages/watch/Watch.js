@@ -1,6 +1,7 @@
 import React from 'react';
-import { VideosList } from '../../video/videoslist';
+import { VIDEO_DATA } from '../../video/videoslist';
 import WatchVideo from '../../video/watchvideo';  
+
 
 class Watch extends React.Component {
   constructor() {
@@ -14,32 +15,34 @@ class Watch extends React.Component {
         part:'snippet',
         channelId: 'UCaZrvuy_4QsClMYRCcbyMjQ'
       },
-      videoData: [],
+      videoData: VIDEO_DATA,
       route: 'home',
+      filterOption : ''
     }
   }
 
-  // componentDidMount () {
-  //   const fullUrlPlaylists = `https://www.googleapis.com/youtube/v3/playlists?part=${this.state.apiRequestParameter.part}&channelId=${this.state.apiRequestParameter.channelId}&maxResults=${this.state.apiRequestParameter.maxResults}&order=${this.state.apiRequestParameter.order}&key=${this.state.apiRequestParameter.apiKey}`;
+   componentDidMount () {
+    //  const fullUrlPlaylists = `https:www.googleapis.com/youtube/v3/playlists?part=${this.state.apiRequestParameter.part}&channelId=${this.state.apiRequestParameter.channelId}&maxResults=${this.state.apiRequestParameter.maxResults}&order=${this.state.apiRequestParameter.order}&key=${this.state.apiRequestParameter.apiKey}`;
     
-  //   console.log(fullUrlPlaylists);
-  //   fetch(fullUrlPlaylists)
-  //   .then(resp => resp.json())
-  //   .then(data => this.setState({ playlistData: data }))
-  //   .catch(err => console.log(err))
-  // }
+    //  console.log(fullUrlPlaylists);
+    //  fetch(fullUrlPlaylists)
+    //  .then(resp => resp.json())
+    //  .then(data => this.setState({ playlistData: data }))
+    //  .catch(err => console.log(err))
+   }
+
+
   
   render() {
-    
     const { onRouteChange, toggleModal, isModalOpen, showVideo, playIcon } = this.props;
-    const videoList = VideosList.map(videolist => {
-      return <WatchVideo key={videolist.id} 
-                         videoLists={videolist} 
-                         toggleModal={toggleModal} 
-                         isModalOpen={isModalOpen} 
-                         showVideo={showVideo}
-                         playIcon={playIcon}
-                         />
+    const { videoData, filterOption } = this.state;
+    const handleFilter = (event) => {
+      const e = event.currentTarget.dataset.id;
+      this.setState({...this.state, filterOption: e });
+    }
+
+    const videos = videoData.map((video, idx) => {
+      return video.category.includes(filterOption) ? video : idx;
     });
     
     return (
@@ -51,23 +54,27 @@ class Watch extends React.Component {
               <hr/>
               <div className="filter-options">
                 <ul className="filter-buttons">
-                  <li>All</li>
-                  <li>Revial Series</li>
-                  <li>Special Projects</li>
-                  <li>Special Projects</li>
-                  <li>Special Projects</li>
-                  <li>Special Projects</li>
-                  <li>Special Projects</li>
-                  <li>Special Projects</li>
-                  <li>Special Projects</li>
-                  <li>Special Projects</li>
-                  <li>Special Projects</li>
-                  <li>Special Projects</li>
+                 <li data-id='All' onClick={handleFilter}>All</li>
+                 <li data-id='S.B. Thing' onClick={handleFilter}>S.B. Thing</li>
+                 <li data-id='Revial Series' onClick={handleFilter}>Revial Series</li>
+                 <li data-id='Bible Studies' onClick={handleFilter}>Bible Studies</li>
+                 <li data-id='Joseph Magar' onClick={handleFilter}>Joseph Magar</li>
                 </ul>
               </div>
               <div className="video-wrapper">
                 {/* Display an array of video cards */}
-                 {videoList}
+                  {
+                    videos.map((video, idx) => {
+                      return <WatchVideo key={idx}
+                          video={video} 
+                          toggleModal={toggleModal} 
+                          isModalOpen={isModalOpen} 
+                          showVideo={showVideo}
+                          playIcon={playIcon}
+                          />
+                    })
+                  }
+                  
               </div>
           </div>
       </div>

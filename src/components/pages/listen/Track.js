@@ -5,8 +5,8 @@ let song = new Audio('https://jeewitbachan-assets.s3.ap-south-1.amazonaws.com/au
 );
 
 class Track extends React.Component {
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state= {
             nowPlaying: '',
             isPlaying: false,
@@ -16,12 +16,16 @@ class Track extends React.Component {
 
     componentDidUpdate() {
         song.addEventListener('timeupdate', () => {
-        let fillBar = document.getElementById("fill");
-        let position = song.currentTime/ song.duration;
-        fillBar.style.width = position * 100 + '%';
+        const fillBar = document.getElementById("fill");
+        if(fillBar){
+            let position = song.currentTime/ song.duration;
+            fillBar.style.width = position * 100 + '%';
+        }else{
+            return null;
+        }
         });
-      };
-
+    };
+    
 //toggle isPlayng state to display play/pause button
     toggleIsPlaying = (id) => {
 
@@ -48,24 +52,25 @@ class Track extends React.Component {
     render() {
         const { albums } = this.props;
         const { nowPlaying, isPlaying, isPaused } = this.state;
-        const tracksList = albums.map(tracks => {return tracks});
+        const tracksList = albums.tracks.map(tracks => {return tracks});
 
-        //Function to play or pause the audio Book 1
-        const playOrPause = (src) => {
-            let newSong = new Audio(src);
-            if(song.src === newSong.src) { 
-                 if(song.paused) { 
-                     song.play();
-                    
-                 }else{
-                     song.pause();
-                 }
-            }else {  
-                song.pause();
-                song = newSong;
-                song.play();
-            }
+       //Function to play or pause the audio Book 1
+       const playOrPause = (src) => {
+        let newSong = new Audio(src);
+        if(song.src === newSong.src) { 
+             if(song.paused) { 
+                 song.play();
+                
+             }else{
+                 song.pause();
+             }
+        }else {  
+            song.pause();
+            song = newSong;
+            song.play();
         }
+    }
+
 
         //map tracksList to get the indidual track 
         

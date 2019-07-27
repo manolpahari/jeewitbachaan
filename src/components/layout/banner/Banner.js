@@ -4,23 +4,54 @@ import Headphone from './headphone.png';
 import Play from './play-button.png';
 
 
-const Banner = ({ onRouteChange }) => {
+const Banner = ({ onRouteChange, bannerData, route }) => {
+
   return (
     <div>
-        <div className="banner-bg">
-            <div className="banner-content-right -auto">
-                <iframe src="https://www.youtube.com/embed/0tyRis6Md6A" frameBorder="0" title="Revelation"
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                  allowFullScreen>
-                </iframe>
-            </div>
-        <div className="banner-content-left">
-                <h2>Revelation: <br/>
-                the Bride, the Beast, and Babylon</h2>
-                <p className="title">Going to the very heart of the Bible’s most challenging book, this 90-minute documentary, hosted by Doug Batchelor, decodes the visions of Revelation 12 and 17 for everyone to understand.</p>
-              </div>    
-      </div>
-    
+        {
+          route === 'home' || route === 'watch' ? 
+            <div className="banner-bg">
+                    <div className="banner-content-right -auto">
+                      <iframe src={bannerData[0].src} frameBorder="0" title="Revelation"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                        allowFullScreen>
+                      </iframe>
+                  </div>
+                  <div className="banner-content-left">
+                      <h2>{bannerData[0].header}</h2>
+                      <h2>{bannerData[0].subHeader}</h2>
+                      <p className="title">{bannerData[0].description}</p>
+                  </div>
+            </div>      
+            : route === 'listen' ?
+              <div className="banner-bg">
+                  <div className="banner-content-right -auto">
+                      <img
+                      src={bannerData[2].src} alt=""
+                      style={{width:'800px', height:'545px', marginTop:'58px'}}
+                      />
+                  </div>
+                  <div className="banner-content-left">
+                      <h3>{bannerData[2].header}</h3>
+                      <h2>{bannerData[2].subHeader}</h2>
+                      <p className="title">{bannerData[2].description}</p>
+                  </div>
+              </div> 
+            : route === 'read' ?  
+              <div className="banner-bg">
+                  <div className="banner-content-right -auto">
+                      <img 
+                      src={bannerData[3].src} alt=""
+                      style={{width:'800px', height:'597px', marginTop:'65px'}}
+                      />
+                  </div>
+                  <div className="banner-content-left">
+                      <h2>{bannerData[3].header}</h2>
+                      <h2>{bannerData[3].subHeader}</h2>
+                      <p className="title">{bannerData[3].description}</p>
+                  </div>
+              </div> : null
+        }
       {/* Banner Tab */}
         <div className="banner-tab">
           <div className="tab-wrapper">

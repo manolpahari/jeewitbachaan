@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import BannerData from '../components/layout/banner/banner-data';
 import playIcon from '../../src/playIcon.png';
 import Navbar from '../components/layout/navbar/Navigation';
 import Banner from '../components/layout/banner/Banner';
@@ -36,6 +37,7 @@ class App extends Component {
  
   componentDidMount () {
       // fetching latest videos from youtube api.
+      
       const fullVideosUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${this.state.apiRequestParameter.channelId}&maxResults=${this.state.apiRequestParameter.maxResults}&order=${this.state.apiRequestParameter.order}&type=${this.state.apiRequestParameter.type}&key=${this.state.apiRequestParameter.apiKey}`;   
       fetch(fullVideosUrl)
       .then(resp => resp.json())
@@ -93,10 +95,12 @@ class App extends Component {
             </div> : null
 
           }
-        <Banner onRouteChange={this.onRouteChange}/>
+
         {
          route === 'home' ?
           <div>
+            <Banner onRouteChange={this.onRouteChange} bannerData={BannerData} route={route}/> 
+
             <FeaturedVideo playlistData={playlistData} 
               apiRequestParameter={apiRequestParameter} 
               showVideo={this.showVideo} 
@@ -105,6 +109,8 @@ class App extends Component {
           </div> :
         route === 'watch' ?
           <div>
+            <Banner onRouteChange={this.onRouteChange} bannerData={BannerData} route={route}/> 
+
             <Watch onRouteChange={this.onRouteChange} 
             toggleModal={this.toggleModal} 
             isModalOpen={isModalOpen} 
@@ -114,10 +120,12 @@ class App extends Component {
           </div> :
           route === 'listen' ?
           <div>
-            <Listen onRouteChange={this.onRouteChange}/> 
+            <Banner onRouteChange={this.onRouteChange} bannerData={BannerData} route={route}/>
+            <Listen onRouteChange={this.onRouteChange} route={route}/> 
           </div> :
           route === 'read' ?
           <div>
+            <Banner onRouteChange={this.onRouteChange} bannerData={BannerData} route={route}/>
             <Read onRouteChange={this.onRouteChange}/>
           </div> : null
         }

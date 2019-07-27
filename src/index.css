@@ -76,6 +76,7 @@ h2 {
 .banner-content-left {
   color:#fff;
   padding: 10%;
+  width: 60%
 }
 
 .banner-content-left .title{
@@ -160,14 +161,17 @@ hr {
 .video-wrapper {
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
   margin: 40px 0 0;
   padding: 0;
 }
 
 .video-card {
   display: flex;
-  margin: 0.5rem;
+  width: 320px;
+  height: 250px;
+  margin: 1rem;
 }
 
 .video-img {
