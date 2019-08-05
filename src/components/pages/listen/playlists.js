@@ -3,6 +3,7 @@ const AUDIO_DATA = [
         id: 1,
         bookTitle: 'Book 1',
         bookAuthor: '',
+        introTrackUrl : 'https://jeewitbachan-assets.s3.ap-south-1.amazonaws.com/audiobooks/col/col_1.mp3',
         tracks: [
             {
                 id: 1,
@@ -123,13 +124,16 @@ const AUDIO_DATA = [
                 title: 'जुन लाभ हानि हो',
                 url: 'https://jeewitbachan-assets.s3.ap-south-1.amazonaws.com/audiobooks/col/col_20.mp3',
                 length: '4:10'
-            },
-            {
-                id: 21, 
-                title: 'पहिले टुसा, त्यसपछि बाला',
-                url: 'https://jeewitbachan-assets.s3.ap-south-1.amazonaws.com/audiobooks/col/col_21.mp3',
-                length: '4:10'
-            },
+            }
+        ]
+    },
+    {
+        id: 2,
+        bookTitle: 'Book 2',
+        bookAuthor: '',
+        introTrackUrl : 'https://jeewitbachan-assets.s3.ap-south-1.amazonaws.com/audiobooks/col/col_23.mp3',
+        tracks: [
+           
             {
                 id: 22, 
                 title: 'कथनी र करनी',
@@ -178,103 +182,6 @@ const AUDIO_DATA = [
                 url: 'https://jeewitbachan-assets.s3.ap-south-1.amazonaws.com/audiobooks/col/col_28.mp3',
                 length: '4:10'
             }
-        ]
-    },
-    {
-        id: 2,
-        bookTitle: 'Book 2',
-        bookAuthor: '',
-        tracks: [
-            {
-                id: 1,
-                title: 'दृष्टान्तहरुमार्फत शिक्षा',
-                url: 'https://jeewitbachan-assets.s3.ap-south-1.amazonaws.com/audiobooks/col/col_1.mp3',
-                length: '6:08'
-            },
-            {
-                id: 2,
-                title: 'एउटा बिउ छर्ने बिउ छर्न निस्क्यो',
-                url: 'https://jeewitbachan-assets.s3.ap-south-1.amazonaws.com/audiobooks/col/col_2.mp3',
-                length: '21:36'
-            },
-            {
-                id: 3, 
-                title: 'पहिले टुसा, त्यसपछि बाला',
-                url: 'https://jeewitbachan-assets.s3.ap-south-1.amazonaws.com/audiobooks/col/col_3.mp3',
-                length: '4:10'
-            },
-            {
-                id: 4, 
-                title: 'सामा',
-                url: 'https://jeewitbachan-assets.s3.ap-south-1.amazonaws.com/audiobooks/col/col_4.mp3',
-                length: '4:10'
-            },
-            {
-                id: 5, 
-                title: 'स्वर्गको राज्य रायोको बीउको दानाजस्तो',
-                url: 'https://jeewitbachan-assets.s3.ap-south-1.amazonaws.com/audiobooks/col/col_5.mp3',
-                length: '4:10'
-            },
-            {
-                id: 6, 
-                title: 'बीउ छर्ने दृष्टान्तका अन्य पाठहरु',
-                url: 'https://jeewitbachan-assets.s3.ap-south-1.amazonaws.com/audiobooks/col/col_6.mp3',
-                length: '4:10'
-            },
-            {
-                id: 7, 
-                title: 'स्वर्गको राज्य खमीरजस्तो',
-                url: 'https://jeewitbachan-assets.s3.ap-south-1.amazonaws.com/audiobooks/col/col_7.mp3',
-                length: '4:10'
-            },
-            {
-                id: 8, 
-                title: 'गाडधन',
-                url: 'https://jeewitbachan-assets.s3.ap-south-1.amazonaws.com/audiobooks/col/col_8.mp3',
-                length: '4:10'
-            },
-            {
-                id: 9, 
-                title: 'बहुमुल्य मोती',
-                url: 'https://jeewitbachan-assets.s3.ap-south-1.amazonaws.com/audiobooks/col/col_9.mp3',
-                length: '4:10'
-            },
-            {
-                id: 10, 
-                title: 'जाल',
-                url: 'https://jeewitbachan-assets.s3.ap-south-1.amazonaws.com/audiobooks/col/col_10.mp3',
-                length: '4:10'
-            },
-            {
-                id: 11, 
-                title: 'नयाँ र पुराना मूल्यवान सामानहरु',
-                url: 'https://jeewitbachan-assets.s3.ap-south-1.amazonaws.com/audiobooks/col/col_11.mp3',
-                length: '4:10'
-            },
-            {
-                id: 12, 
-                title: 'अरुलाई दिने उद्येश्यका साथ माग्नु',
-                url: 'https://jeewitbachan-assets.s3.ap-south-1.amazonaws.com/audiobooks/col/col_12.mp3',
-                length: '4:10'
-            },
-            {
-                id: 13, 
-                title: 'दुई आराधकहरु',
-                url: 'https://jeewitbachan-assets.s3.ap-south-1.amazonaws.com/audiobooks/col/col_13.mp3',
-                length: '4:10'
-            },
-            {
-                id: 14, 
-                title: 'के परमेश्वरले आफ्ना जनहरुका न्याय गर्नुहहुनेछैन त',
-                url: 'https://jeewitbachan-assets.s3.ap-south-1.amazonaws.com/audiobooks/col/col_14.mp3',
-                length: '4:10'
-            },
-            {
-                id: 15, 
-                title: 'यस मानिसले पापीहरुलाई ग्रहण गर्दछ',
-                url: 'https://jeewitbachan-assets.s3.ap-south-1.amazonaws.com/audiobooks/col/col_15.mp3',
-                length: '4:10'
-            },
         ]
     },
 ];

@@ -7,7 +7,7 @@ import Banner from '../components/layout/banner/Banner';
 import FeaturedVideo from '../components/dashboard/FeaturedVideos';
 import Footer from '../components/layout/footer/Footer';
 import Watch from '../components/pages/watch/Watch';
-import Listen from '../components/pages/listen/Listen';
+import Listen from '../components/pages/listen/Listen-page';
 import Read from '../components/pages/read/Read';
 import Modal from '../components/modal/modal';
 import Popup from '../components/modal/popup';
@@ -38,11 +38,11 @@ class App extends Component {
   componentDidMount () {
       // fetching latest videos from youtube api.
       
-      const fullVideosUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${this.state.apiRequestParameter.channelId}&maxResults=${this.state.apiRequestParameter.maxResults}&order=${this.state.apiRequestParameter.order}&type=${this.state.apiRequestParameter.type}&key=${this.state.apiRequestParameter.apiKey}`;   
-      fetch(fullVideosUrl)
-      .then(resp => resp.json())
-      .then(data => this.setState({ playlistData: data.items }))
-      .catch(err => console.log(err))
+      // const fullVideosUrl = `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${this.state.apiRequestParameter.channelId}&maxResults=${this.state.apiRequestParameter.maxResults}&order=${this.state.apiRequestParameter.order}&type=${this.state.apiRequestParameter.type}&key=${this.state.apiRequestParameter.apiKey}`;   
+      // fetch(fullVideosUrl)
+      // .then(resp => resp.json())
+      // .then(data => this.setState({ playlistData: data.items }))
+      // .catch(err => console.log(err))
   }
 
   showVideo = (videoData) => {

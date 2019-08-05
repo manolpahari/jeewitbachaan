@@ -236,8 +236,9 @@ cursor: pointer;
 
 /* AUDIO COMPONENT */
 .audio-list-container {
-  display: flex;
-  margin-top: 30px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  margin: 20px 10px;
 }
 .player-wrapper {
   background: #FFF;
@@ -245,7 +246,7 @@ cursor: pointer;
   -moz-box-shadow: 5px 5px 22px 0px rgba(0,0,0,0.2);
   box-shadow: 5px 5px 22px 0px rgba(0,0,0,0.2);
   margin: 0 auto;
-  max-width: 550px;
+  width: 550px;
   border-radius: 10px;
 }
 .audio-img {
@@ -445,6 +446,12 @@ i {
 }
 
 #fill {
+  height: 8px;
+  background: #0D61E2;
+  border-radius: 20px;
+}
+
+#fill2 {
   height: 8px;
   background: #0D61E2;
   border-radius: 20px;

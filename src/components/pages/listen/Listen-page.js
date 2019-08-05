@@ -1,5 +1,5 @@
 import React from 'react';
-import TrackList from './TrackList';
+import Player from './player.js';
 
 
 const Listen = ({ onRouteChange }) => {
@@ -17,8 +17,7 @@ const Listen = ({ onRouteChange }) => {
                 <p className='w-40 pa2 tc'>Audio File</p>
                 <p className='w-20 pa2 tc'>Chapter Length</p>
               </div> */}
-                  
-                <TrackList/> 
+                <Player/> 
               </div>
           </div>
       </div>
