@@ -1,7 +1,7 @@
 import React from 'react';
+import './watch.styles.css';
 import { VIDEO_DATA } from '../../video/videoslist';
-import WatchVideo from '../../video/watchvideo';  
-
+import VideoCard from '../../video/video-card/video-card.component';
 
 class Watch extends React.Component {
   constructor() {
@@ -34,7 +34,7 @@ class Watch extends React.Component {
 
   
   render() {
-    const { onRouteChange, toggleModal, isModalOpen, showVideo, playIcon } = this.props;
+    const { onRouteChange, toggleModal, isModalOpen, showVideo } = this.props;
     const { videoData, filterOption } = this.state;
     const handleFilter = (event) => {
       const e = event.currentTarget.dataset.id;
@@ -50,7 +50,7 @@ class Watch extends React.Component {
           <div className="container">
               <span style={{fontWeight:'900', fontSize:'1.2rem'}}>&larr;</span> 
               <span className="pointer ml1" onClick={onRouteChange}>Back to Homepage</span>
-              <h1 style={{marginTop:'1em', color:'#0081FF'}}>Featured Videos</h1>
+              <h2 style={{marginTop:'1em', color:'#0081FF'}}>Featured Videos</h2>
               <hr/>
               <div className="filter-options">
                 <ul className="filter-buttons">
@@ -61,20 +61,19 @@ class Watch extends React.Component {
                  <li data-id='Joseph Magar' onClick={handleFilter}>Joseph Magar</li>
                 </ul>
               </div>
-              <div className="video-wrapper">
+              <div className="cards">
                 {/* Display an array of video cards */}
                   {
                     videos.map((video, idx) => {
-                      return <WatchVideo key={idx}
+                      return <VideoCard key={idx}
                           video={video} 
                           toggleModal={toggleModal} 
                           isModalOpen={isModalOpen} 
                           showVideo={showVideo}
-                          playIcon={playIcon}
+                          
                           />
                     })
                   }
-                  
               </div>
           </div>
       </div>

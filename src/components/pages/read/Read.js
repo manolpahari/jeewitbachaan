@@ -7,7 +7,7 @@ const Listen = ({ onRouteChange }) => {
           <div className="container">
               <span style={{fontWeight:'900', fontSize:'1.2rem'}}>&larr;</span> 
               <span className="pointer ml1" onClick={ ()=> onRouteChange('home')} >Back to Homepage</span>
-              <h1 style={{marginTop:'1em', color:'#0081FF'}}>Free Book Library</h1>
+              <h2 style={{marginTop:'1em', color:'#0081FF'}}>Free Book Library</h2>
               <hr/>
               <Book />  
           </div>

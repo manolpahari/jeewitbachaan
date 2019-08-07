@@ -6,9 +6,9 @@ const contact = () => {
         <div>
             <article 
             className="br3 w-50-m w-25-l center bg-white shadow-5"
-            style={{width:'435px', height:'400px'}}>
+            style={{width:'435px', height:'450px'}}>
                 <main className="pa4 w-100">
-                    <h1 style={{marginTop:'1em', color:'#0081FF'}}>Contact Us</h1>
+                    <h1 style={{color:'#0081FF'}}>Contact Us</h1>
                     <hr/>
                     <div>
                        <table className="mt4">
@@ -30,8 +30,8 @@ const contact = () => {
                         </tbody>   
                        </table>
                        <div style={{float:'right'}}>
-                            <span className="f2 pointer"><FiFacebook/></span> 
-                            <span className="f2 ml3 pointer"><FiYoutube/></span>
+                            <span className="f2 pointer"><a href="https://www.facebook.com/jeewitbachan/" target="_blank" rel="noopener noreferrer"><FiFacebook/></a></span> 
+                            <span className="f2 ml3 pointer"><a href="https://www.youtube.com/channel/UCaZrvuy_4QsClMYRCcbyMjQ" target="_blank" rel="noopener noreferrer"><FiYoutube/></a></span>
                        </div>
                     </div>  
                 </main>

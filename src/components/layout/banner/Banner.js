@@ -28,7 +28,7 @@ const Banner = ({ onRouteChange, bannerData, route }) => {
                   <div className="banner-content-right -auto">
                       <img
                       src={bannerData[2].src} alt=""
-                      style={{width:'800px', height:'545px', marginTop:'58px'}}
+                      style={{width:'800px', height:'545px', marginTop:'56px'}}
                       />
                   </div>
                   <div className="banner-content-left">
@@ -42,7 +42,7 @@ const Banner = ({ onRouteChange, bannerData, route }) => {
                   <div className="banner-content-right -auto">
                       <img 
                       src={bannerData[3].src} alt=""
-                      style={{width:'800px', height:'597px', marginTop:'65px'}}
+                      style={{width:'800px', height:'597px', marginTop:'56px'}}
                       />
                   </div>
                   <div className="banner-content-left">
@@ -58,10 +58,10 @@ const Banner = ({ onRouteChange, bannerData, route }) => {
             <ul>
               <li className="watch" 
               onClick={() => onRouteChange('watch')}>
-              <img className="change-my-color" src={Play} alt=""/>Watch
+              <img className="change-my-color" src={Play} alt=""/><p className="tab-title">Watch</p>
               </li>
-              <li className="listen" onClick={() => onRouteChange('listen')}><img src={Headphone} alt=""/>Listen</li>
-              <li className="read" onClick={() => onRouteChange('read')}><img src={Book} alt=""/>Read</li>
+              <li className="listen" onClick={() => onRouteChange('listen')}><img src={Headphone} alt=""/><p className="tab-title">Listen</p></li>
+              <li className="read" onClick={() => onRouteChange('read')}><img src={Book} alt=""/><p className="tab-title">Read</p></li>
             </ul>
           </div>
         </div>

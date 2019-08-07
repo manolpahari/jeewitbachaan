@@ -1,21 +1,22 @@
 import React from 'react';
-import Video from '../video/video';
+import './featured-videos.styles.css';
+import VideoCard from '../video/video-card/video-card.component';
 
 class FeaturedVideos extends React.Component {
   
   render() {
-    const { playlistData, showVideo, toggleModal, playIcon } = this.props;
+    const { playlistData, showVideo, toggleModal } = this.props;
     const videoPlaylistArray = playlistData.map( playlist => {
-      return <Video key={playlist.id.videoId} 
+      return <VideoCard key={playlist.id.videoId} 
               videoList={playlist} 
               showVideo={showVideo} 
               toggleModal={toggleModal}
-              playIcon={playIcon}
               />
     })
+ 
     
     return (
-        <div style={{background:'#F7FBFF', position:'relative', top:'200px'}}>
+        <div className="featured-videos" style={{}}>
           <div className="container">
               <span style={{fontWeight:'900', fontSize:'1.2rem'}}>&larr;</span> 
               <span className="pointer ml1">Back to Homepage</span>
@@ -38,7 +39,7 @@ class FeaturedVideos extends React.Component {
                   <li><a href="/">Special Projects</a></li>
                 </ul>
               </div> */}
-              <div className="video-wrapper">
+              <div className="cards">
                {videoPlaylistArray}
               </div>
           </div>
