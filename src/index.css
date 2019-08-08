@@ -57,31 +57,7 @@ h2 {
 
 /* Banner */
 
-.banner-bg {
-  display: block;
-  background: #0081FF;
-  width: 100%;
-  height: auto;
-}
-
-.banner-bg iframe {
-  width: 50em;
-  height:608px;
-}
-
-.banner-content-right {
-  padding: 15px 0 0 10px;
-  float: right;
-}
-
-
-.banner-content-left {
-  color:#fff;
-  padding: 10%;
-  width: 60%
-}
-
-.banner-content-left .title{
+.title{
   font-family: 'Poppins-Regular', sans-serif;
   font-size: 18px;
 }
