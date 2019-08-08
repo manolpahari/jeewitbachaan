@@ -28,6 +28,7 @@ h2 {
   font-weight: 400
 }
 
+
 .container {
   padding: 1% 0 2% 10%;
   position: relative;
@@ -35,6 +36,7 @@ h2 {
   margin: 0;
   min-width: 91%;
 }
+
 
 /* Navigation section */
 .nav-menu {
@@ -49,102 +51,14 @@ h2 {
   color: #0081FF;
 }
 
-.contact li::after {
-  content: " |";  /* this is your text. You can also use UTF-8 character codes as I do here */
-  margin-left: .7rem;
-}
 
-
-/* Banner */
-
-.title{
-  font-family: 'Poppins-Regular', sans-serif;
-  font-size: 18px;
-}
-
-/* Banner Tab section */
-
-.tab-wrapper {
-  width: 100%;
-  position: absolute;
-}
-
-.tab-wrapper ul {
-  display: flex;
-  text-align: center;
-  list-style-type: none;
-  padding: 0;
-}
-
-.tab-wrapper ul li{
-  padding: 50px;
-  text-transform: uppercase;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.5rem;
-  color:#fff;
-  width:33.35%;
-}
-
-.tab-wrapper ul li.watch {
-  background: #0F55D6;
-}
-
-.tab-wrapper ul li.listen {
-  background: #0D61E2;
-}
-
-.tab-wrapper ul li.read{
-  background: #086BEA;
-}
-
-
-.tab-wrapper ul li:hover {
-  background:#14BEFF;
-  cursor: pointer;
-}
-
-
-.tab-wrapper ul li img {
-  width: 76px;
-  height: 76px;
-}
-.tab-title {
-  width: 100%;
-}
-.footer p {
-  background-color: #007bff;
-}
-.footer a {
-  color:#DDD306;
-}
 .featured-videos {
   background:#F7FBFF;
   position: relative;
   top: 200px;
 }
 
-@media screen and (max-width: 520px) {
-.container {
-  padding: 20px 10px; 
-}
-.featured-videos {
-  top: 120px;
-}
-.tab-wrapper ul li {
-  padding: 20px;
-  font-size: 1.2rem;
-}
-.tab-wrapper ul li img {
-  width: 50px;
-  height: auto;
-}
-.tab-title {
-  margin-top: 10px;
-}
-.banner-content-left {
-  width: 100%;
-}
-}
+
 /* Dashboard section */
 
 hr {
@@ -198,9 +112,23 @@ color: #fff;
 }
 
 .footer p{ 
+  background-color: #007bff;
   line-height: 100px;
   margin-bottom: 0;
 }
+
+.footer a {
+  color:#DDD306;
+}
+
+/* Popup Modal */
+
+.popup-content {
+  display: flex;
+  justify-content: center;
+  width: 100%
+}
+
 
 
 /* AUDIO COMPONENT */
@@ -387,6 +315,9 @@ i {
   flex: 0.2;
 }
 @media screen and (max-width: 520px) {
+  .container {
+    padding: 15px;
+  }
   .audio-img {
       margin: 0 20px 0 0;
       height: 150px;

@@ -2,7 +2,7 @@ import React from 'react';
 import {FaPlay, FaPause } from "react-icons/fa";
 
 const Tracks = ({ tracks, isPlaying, playOrPause, currentTrackId, bookId }) => {
-    console.log('bookId', bookId);
+ 
     return(
          <div className="playlist">
             <div className="tracklist">   

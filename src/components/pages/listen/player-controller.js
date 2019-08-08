@@ -2,7 +2,7 @@ import React from 'react';
 import {FaRegPlayCircle, FaRegPauseCircle } from "react-icons/fa";
 
 
-const Book1Controller = ({ currentTrackTitle, currentTrackId, src, isPlaying, playOrPause, bookId, bookTitle, introTrackUrl }) => {
+const PlayerController = ({ currentTrackTitle, currentTrackId, src, isPlaying, playOrPause, bookId, bookTitle, introTrackUrl }) => {
     return (
         <div className="player-controllers">
             {/* Display Book 1 */}
@@ -36,4 +36,4 @@ const Book1Controller = ({ currentTrackTitle, currentTrackId, src, isPlaying, pl
     )
 }
 
-export default Book1Controller;
+export default PlayerController;

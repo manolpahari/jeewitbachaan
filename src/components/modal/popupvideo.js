@@ -9,15 +9,13 @@ const popupVideo = ({ toggleModal, modalTriggerKey, videoData }) => {
         {
          modalTriggerKey==='video' ?
         <div className="popup-modal">
-            <div className="center"> 
-                <div>
-                <iframe width="640" height="480" title="videoData.id"
-                src={src}
-                frameBorder="0" 
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen></iframe>
-                </div>  
-            </div>  
+                <div className="popup-content">
+                    <iframe width="640" height="480" title="videoData.id"
+                    src={src}
+                    frameBorder="0" 
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+                    allowFullScreen></iframe>
+                    </div>  
             <div className="modal-close" onClick={toggleModal}>&times;</div>    
         </div> : null
         }

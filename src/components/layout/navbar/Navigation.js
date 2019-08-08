@@ -21,7 +21,7 @@ const Navigation = ({ onRouteChange, toggleModal }) => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ml-auto">
             <Nav.Link  className="contact"><li onClick={() => toggleModal('contact')}>CONTACT US</li></Nav.Link>
-            <Nav.Link  className="search"><li onClick={toggleModal}>SEARCH</li></Nav.Link>
+            {/* <Nav.Link  className="search"><li onClick={toggleModal}>SEARCH</li></Nav.Link> */}
           </Nav>
         </Navbar.Collapse>
       </Navbar>

@@ -1,5 +1,5 @@
 import React from 'react';
-import Book1Controller from './book1-controller';
+import PlayerController from './player-controller';
 import Tracks from './tracks';
 
 let song = new Audio('https://jeewitbachan-assets.s3.ap-south-1.amazonaws.com/audiobooks/col/col_1.mp3'
@@ -34,7 +34,7 @@ class TrackList extends React.Component {
     render() {
         const { currentTrackTitle, isPlaying, src, currentTrackId } = this.state;
         const { bookTitle, tracks, bookId, introTrackUrl } = this.props;
-        console.log('bookID', bookId)
+     
         //Function to play or pause the audio Book 1
         const playOrPause = (src, title, id, bookId) => {
             let newSong = new Audio(src);
@@ -72,7 +72,7 @@ class TrackList extends React.Component {
             <div className='audio-list-container'>
                 {/* Dispaly AudioBook 1*/}
                 <div className="player-wrapper">
-                <Book1Controller currentTrackTitle={currentTrackTitle}
+                <PlayerController currentTrackTitle={currentTrackTitle}
                                     src={src}
                                     isPlaying={isPlaying}
                                     currentTrackId={currentTrackId}

@@ -8,7 +8,7 @@ import Play from './play-button.png';
 const Banner = ({ onRouteChange, bannerData, route }) => {
 
   return (
-    <div>
+    <div className="banner-wrapper">
         {
           route === 'home' || route === 'watch' ? 
             <div className="banner">
@@ -54,14 +54,14 @@ const Banner = ({ onRouteChange, bannerData, route }) => {
       {/* Banner Tab */}
         <div className="banner-tab">
           <div className="tab-wrapper">
-            <ul>
-              <li className="watch" 
+            
+              <div className="tab item watch" 
               onClick={() => onRouteChange('watch')}>
               <img className="change-my-color" src={Play} alt=""/><p className="tab-title">Watch</p>
-              </li>
-              <li className="listen" onClick={() => onRouteChange('listen')}><img src={Headphone} alt=""/><p className="tab-title">Listen</p></li>
-              <li className="read" onClick={() => onRouteChange('read')}><img src={Book} alt=""/><p className="tab-title">Read</p></li>
-            </ul>
+              </div>
+              <div className="tab item listen" onClick={() => onRouteChange('listen')}><img src={Headphone} alt=""/><p className="tab-title">Listen</p></div>
+              <div className="tab item read" onClick={() => onRouteChange('read')}><img src={Book} alt=""/><p className="tab-title">Read</p></div>
+            
           </div>
         </div>
     </div>

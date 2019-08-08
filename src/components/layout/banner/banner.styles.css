@@ -1,8 +1,8 @@
+ /* Banner  */
 
 .banner {
   display: flex;
   flex-direction: row-reverse;
-  /* flex-wrap: wrap; */
   justify-content: space-between;
   background: #0081ff;
  
@@ -40,6 +40,100 @@ img {
 .banner-desc {
   font-size: 18px;
 }
+
+.title{
+  font-family: 'Poppins-Regular', sans-serif;
+  font-size: 18px;
+}
+
+/* Banner Tab section */
+
+.banner-tab {
+  position: relative;
+  top: 0px;
+}
+
+.tab-wrapper {
+  width: 100%;
+  position: absolute;
+  display: flex;
+}
+
+.tab-wrapper ul {
+  display: flex;
+  text-align: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.tab {
+  flex: 1 1 500px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  color:#fff;
+  padding-top: 20px;
+}
+
+.tab img {
+  width: 76px;
+  height: 76px;
+}
+
+.tab .item {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  color:#fff;
+  text-transform: uppercase;
+}
+
+
+
+.tab-wrapper .watch {
+  background: #0F55D6;
+}
+
+.tab-wrapper .listen {
+  background: #0D61E2;
+}
+
+.tab-wrapper .read{
+  background: #086BEA;
+}
+
+
+.tab:hover {
+  background:#14BEFF;
+  cursor: pointer;
+}
+
+.tab-title {
+  width: 100%;
+}
+
+
+
+@media screen and (max-width: 520px) {
+  .container {
+    padding: 20px 10px; 
+  }
+
+  .tab-wrapper ul li {
+    padding: 20px;
+    font-size: 1.2rem;
+  }
+  .tab-wrapper ul li img {
+    width: 50px;
+    height: auto;
+  }
+  .tab-title {
+    margin-top: 10px;
+  }
+  .banner-content-left {
+    width: 100%;
+  }
+}
+
 
 @media screen and (max-width: 998px) {
   .banner {
